@@ -10,6 +10,6 @@ jobs:
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
       - name: Build
-        run: "build\workspaces\build_vs.bat"      
+        run: "./build/workspaces/build_vs.bat"      
       - name: Tree
         run: tree
