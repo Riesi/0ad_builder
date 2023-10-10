@@ -6,10 +6,14 @@ jobs:
   build:
     runs-on: windows-2019
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
       - name: Build
-        run: "./build/workspaces/build_vs.bat"      
-      - name: Tree
-        run: tree
+        run: "./build/workspaces/build_vs.bat"
+       - name: Dir
+        run: dir "binaries/system"     
+      - uses: actions/upload-artifact@v3
+        with:
+          name: 0ad-system-artifact
+          path: binaries/system # or path/to/artifact
