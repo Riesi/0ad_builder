@@ -1,3 +1,6 @@
+setlocal
+cd /d %~dp0
+
 call update-workspaces.bat
 
 Rem winget install vswhere
