@@ -12,7 +12,7 @@ jobs:
         uses: microsoft/setup-msbuild@v1.1
       - name: Build
         run: "./build/workspaces/build_vs.bat"
-       - name: Dir
+      - name: Dir
         run: dir "binaries/system"     
       - uses: actions/upload-artifact@v3
         with:
